@@ -5,6 +5,7 @@
 /server/node_modules
 package-lock.json
 /server/package-lock.json
+/server/.env
 /.pnp
 .pnp.js
 
@@ -20,7 +21,6 @@ package-lock.json
 .env.development.local
 .env.test.local
 .env.production.local
-
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
