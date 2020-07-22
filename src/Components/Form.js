@@ -1,6 +1,4 @@
 import React,{Component} from 'react';
-import {AppBar,TextField,RaisedButton} from 'material-ui'
-import {Switch} from 'react-router-dom';
 import FormData from './FormData';
 import Confirm from './Confirm';
 export default class Form extends Component{
