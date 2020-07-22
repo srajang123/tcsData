@@ -12,16 +12,12 @@ class View extends Component{
     }
     componentDidMount()
     {
-        let {data}=this.state;
         axios.get('/data')
         .then(res=>{
-            data=res.data;
-            console.log(res);
             this.setState({
                 data:res.data
             })
         })
-        //change over
     }
     render=()=>{
         return(
