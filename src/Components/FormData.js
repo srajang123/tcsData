@@ -7,7 +7,7 @@ export default class FormData extends Component
     return(
         <MuiThemeProvider>
             <React.Fragment>
-                <AppBar title='User Form'/>
+                <AppBar title='User Form' showMenuIconButton={false}/>
                 <div class="form-data">
                     <TextField hintText='Enter Your First Name' floatingLabelText='First Name' defaultValue={this.props.fname} onChange={this.props.change('fname')}/><br/>
                     <TextField hintText='Enter Your Last Name' floatingLabelText='Last Name' defaultValue={this.props.lname} onChange={this.props.change('lname')}/><br/>

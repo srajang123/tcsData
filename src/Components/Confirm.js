@@ -10,7 +10,7 @@ export default class Confirm extends Component
     return(
         <MuiThemeProvider>
             <React.Fragment>
-                    <AppBar title='Confirm User Details'/>
+                    <AppBar title='Confirm User Details' showMenuIconButton={false}/>
                     <div class="form-data">
                         <List>
                             <ListItem primaryText='First Name' secondaryText={data.fname}/>
@@ -22,8 +22,8 @@ export default class Confirm extends Component
                             <ListItem primaryText='E-mail' secondaryText={data.email}/>
                             <ListItem primaryText='Contact' secondaryText={data.contact}/>
                         </List>
-                        <RaisedButton label='Final Submit' onClick={submit}/>
-                        <RaisedButton label='Edit Data' onClick={back}/>
+                        <RaisedButton label='Final Submit' onClick={submit}primary={true}/><br/><br/>
+                        <RaisedButton label='Edit Data' onClick={back}primary={true}/>
                     </div>
             </React.Fragment>
         </MuiThemeProvider>
