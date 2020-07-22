@@ -15,12 +15,13 @@ class View extends Component{
         let {data}=this.state;
         axios.get('/data')
         .then(res=>{
-            data=res;
+            data=res.data;
+            console.log(res);
+            this.setState({
+                data:res.data
+            })
         })
         //change over
-        this.setState({
-            data:data
-        })
     }
     render=()=>{
         return(
@@ -47,8 +48,8 @@ class View extends Component{
                                     <td>{idx+1}</td>
                                     <td>{el.fname}</td>
                                     <td>{el.lname}</td>
-                                    <td>{el.Fname}</td>
-                                    <td>{el.Mname}</td>
+                                    <td>{el.father}</td>
+                                    <td>{el.mother}</td>
                                     <td>{el.city}</td>
                                     <td>{el.role}</td>
                                     <td>{el.email}</td>
