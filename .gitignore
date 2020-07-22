@@ -3,7 +3,7 @@
 # dependencies
 /node_modules
 /server/node_modules
-package-lock.json
+/package-lock.json
 /server/package-lock.json
 /server/.env
 /.pnp
