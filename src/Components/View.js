@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {AppBar} from 'material-ui'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import axios from 'axios';
 class View extends Component{
     constructor(props)
     {
@@ -12,15 +13,10 @@ class View extends Component{
     componentDidMount()
     {
         let {data}=this.state;
-        data.push({
-            fname:'',
-            lname:'',
-            Fname:'',
-            Mname:'',
-            city:'',
-            role:'',
-            email:'',
-            contact:''});
+        axios.get('/data')
+        .then(res=>{
+            data=res;
+        })
         //change over
         this.setState({
             data:data

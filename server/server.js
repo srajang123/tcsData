@@ -8,7 +8,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
 app.post('/data',(req,res,next)=>{
-    console.log(req.data);
+    console.log(req.body);
 })
 app.get('/data',(req,res,next)=>{
     res.json();

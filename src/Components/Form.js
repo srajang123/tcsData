@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import FormData from './FormData';
 import Confirm from './Confirm';
+import axios from 'axios';
 export default class Form extends Component{
     constructor(props)
     {
@@ -39,9 +40,9 @@ export default class Form extends Component{
     }
     SubmitForm=()=>{
         this.incLevel();
-        const {data}=this.state;
+        const data=this.state;
         console.log(data);
-        //submit to server
+        axios.post('/data',data);
     }
     render=()=>{
         const {level}=this.state;
